@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equi="X-UA-Compatible" content=""IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AFDS_BM</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="mediaqueries.css" />
+    </head>
+    <body>
+        <nav id="desktop-nav">
+            <div class="logo">AFDS</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Art Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">AFDS</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#gallery" onclick="toggleMenu()">Art Gallery</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="./afds assets/INSTA LOGO.png" alt="AFDS_BM Profile Picture" />
+            </div>
+            <div class="section_text">
+                <p class="section_text_p1">What's Up People!</p>
+                <h1 class="title">This is AFDS</h1>
+                <p class="section_text_p2">Just siblings working on a comic together.</p>
+                <div class="btn-container">
+                    <button 
+                        class="btn btn-color-1" 
+                        onclick="openPopup()">
+                        Contact Info
+                    </button>
+
+                    
+                    <div class="popup" id="popup">
+                        <div class="contact-image">
+                            <img src="./afds assets/1 - 03_17_2024 - TSEHAI 2.jpg" alt="Tsehai Contact Img" />
+
+                        </div>
+                        <div class="contact-info">
+                            <h2>Contact Us!</h2>
+                            <p>First Name:</p>
+                            <p>Last Name:</p>
+                            <p>Email:</p>
+                            <p>Your Message:</p>
+                            <button class="submit-button" 
+                                onclick="closePopup()">
+                                Submit
+                            </button>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div id="social-container">
+                    <h1 class="link_text">Check Out Our Links:</h1>
+
+                    <img src="./afds assets/Instagram_logo_2022.png" 
+                    alt="Check Out Our Instagram"
+                    class="icon" onclick="location.href='https://www.instagram.com/afds_bm/'" />
+
+                    <img src="./afds assets/Linktree-Emblem.png" 
+                    alt="Check Out Our Linktree"
+                    class="icon" onclick="location.href='https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2FAFDS_BM%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaesZbOP2MszY7NFDD00tnIUmvq2STBICh76qRx3iCe2LppkWAHsSdJhUOD27A_aem_zDDoSKxdrGifK-NSiRtANQ&e=AT0CkORHFYbwsrynechUTyQsxDAicMObSrb4ODXFHf8_o9woI3VPCTHyjM1YdJL6FZG-TlfIBid6MCaOXQ3TV6frETMeP0wNYeit1The3Vywke20HsoSbYc'" />
+                
+                    
+                
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <p class="title">About Us</p>
+            <div class="section_container">
+                <img 
+                    src="./afds assets/WHO WE ARE.png"
+                    alt="Profile picture"
+                    class="about-pic about-banner"
+                />
+            </div>
+            
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        
+                        <h3>Quick Facts:</h3>
+                        <p>6+ Years of Digital Art <br /> Clip Studio Paint, Photoshop Illustrator etc.</p>
+                    </div>
+
+                    
+                 </div>
+
+                 <div class="long-story-container">
+                    
+                    <h3>Long Story:</h3>
+                    </div>
+
+                  <div class="flags-container">
+                    <img src="./afds assets/NIGERIA.png"
+                        alt="Nigerian Flag"
+                        class="icon"
+                    />
+
+                    <img src="./afds assets/Flag_of_the_United_States.svg.png"
+                        alt="US Flag"
+                        class="icon"
+                    />
+                 </div>
+                 <br />
+                <div class="text_container">
+                    
+                   Our Story began around 2015, where we, the four of us, would daydream about different story ideas in our bedroom with little more than notebooks where we'd written down story beats and created character designs there. Fast forward a few years later and we would find ourselves posting the initial prologue our first digitally made comic, Dimensions 2.0 on Webtoon. We were underwhelmed, to say the least, about our audience engagement and discovered that in order to gain attention to any future works, we'd need to be known.
+
+                    <br />
+                    <br /> That's why we created the AFDS brand, starting on Instagram, not just as way to showcase our art and inform people of future projects, but as a platform to showcase our growth not just as artists, but also story tellers, and individuals. </div>
+                
+            </div>   
+            
+            <img src="./assets/arrow.png" 
+            alt="Arrow Icon" 
+            class="icon arrow"
+            onclick="location.href='./birdmask'"/>
+        </section>
+
+       
+        
+
+        <script src="script.js"></script>
+
+        <script>
+            let popup = document.getElementById("popup");
+            
+            function openPopup(){
+                popup.classList.add("open-popup");
+            }
+            function closePopup(){
+                popup.classList.remove("open-popup");
+            }
+        </script>
+    </body>
+</html>
