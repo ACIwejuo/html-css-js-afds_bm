@@ -1,8 +1,46 @@
-@media screen and (max-width: 1200px) {
-    #desktop-nav {
-        display: none;
+@media (max-width: 1200px) {
+  #desktop-nav { display: none; }
+  #hamburger-nav { display: flex; }
+
+  /* Make the profile stack and center everything */
+  #profile {
+    width: 100%;            /* override 100vw */
+    margin: 0 auto;         /* center the section itself */
+    padding: 0 5%;          /* use padding instead of margins for gutters */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* center children horizontally */
+    text-align: center;
+    gap: 1rem;
+    height: auto;           /* don't keep desktop height */
+  }
+
+  /* Center the circle image */
+  .section-pic-container {
+    width: 275px;
+    margin: 0 auto 2rem;        /* center the container itself */
+    display: flex;
+    justify-content: center;
+  }
+  .section-pic-container img {
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    display: block;             /* so margin:auto works if you prefer */
+    object-fit: cover;
+  }
+
+  .arrow { display: none; }
+
+  section, .section-container { height: fit-content; }
+  section { margin: 0 5%; }
+}
+
+@media screen and (max-width: 796px) {
+    .image-wrapper {
+        margin: 0 10px 25px;
     }
-    #hamburger-nav {
-        display: flex;
+    .image-wrapper .swiper-slide-button {
+        display: none;
     }
 }

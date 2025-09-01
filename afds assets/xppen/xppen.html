@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFDS_BM</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script>
+      function toggleMenu() {
+        const links = document.querySelector("#hamburger-nav .menu-links");
+        links.classList.toggle("open");
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav id="desktop-nav">
+      <a href="index.html" class="logo">
+        <img src="afds assets/AFDS LOGO.png" alt="AFDS logo" />
+      </a>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Art Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <a href="index.html" class="logo">AFDS</a>
+      <div class="hamburger-menu">
+        <button class="hamburger-icon" aria-label="Menu" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#gallery" onclick="toggleMenu()">Art Gallery</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="xppen">
+      <div class="xppen-pic-container">
+        <img
+          src="./afds assets/2 - 05_29_2025 - XP PEN 2.png"
+          alt="AFDS_BM Profile Picture"
+        />
+      </div>
+    </section>
+  </body>
+</html>

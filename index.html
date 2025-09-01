@@ -2,15 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equi="X-UA-Compatible" content=""IE=edge">
+        <meta http-equiv="X-UA-Compatible" content=""IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AFDS_BM</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="mediaqueries.css" />
+
+        <!-- Linking SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </head>
     <body>
         <nav id="desktop-nav">
-            <div class="logo">AFDS</div>
+            <a href="#" class="logo">
+                <img src="afds assets/AFDS LOGO.png" alt="AFDS logo">
+            </a>
             <div>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -20,7 +25,9 @@
             </div>
         </nav>
         <nav id="hamburger-nav">
-            <div class="logo">AFDS</div>
+            <a href="#" class="logo">
+                <img src="afds assets/AFDS LOGO.png" alt="AFDS logo">
+            </a>
             <div class="hamburger-menu">
                 <div class="hamburger-icon" onclick="toggleMenu()">
                     <span></span>
@@ -36,7 +43,7 @@
         </nav>
 
         <section id="profile">
-            <div class="section__pic-container">
+            <div class="section-pic-container">
                 <img src="./afds assets/INSTA LOGO.png" alt="AFDS_BM Profile Picture" />
             </div>
             <div class="section_text">
@@ -47,28 +54,55 @@
                     <button 
                         class="btn btn-color-1" 
                         onclick="openPopup()">
-                        Contact Info
+                        Contact Us!
                     </button>
 
                     
-                    <div class="popup" id="popup">
-                        <div class="contact-image">
-                            <img src="./afds assets/1 - 03_17_2024 - TSEHAI 2.jpg" alt="Tsehai Contact Img" />
+                        <div class="popup" id="popup">
+                            <div class="contact-image">
+                                <img src="./afds assets/1 - 03_17_2024 - TSEHAI 2.jpg" alt="Tsehai Contact Img" />
 
+                            </div>
+
+                            <form action="" method="get" class="contact-form">
+                                <div class="contact-form">
+                                    <!--Title-->
+                                     <h2>Contact Us!</h2>
+
+                                    <!-- First Name-->
+                                    <label for="fname">First Name: </label>
+                                    <input type="text" name="fname" id="fname" required />
+                                    
+                                    <!-- Last Name-->
+                                    <label for="fname">Last Name: </label>
+                                    <input type="text" name="lname" id="lname" required />
+                                    
+                                    <!-- Email -->
+                                    <label for="email">Email: </label>
+                                    <input type="text" name="email" id="email" required />
+                                    
+                                    <!-- Your Message -->
+                                    <label for="ymess">Your Message: </label>
+                                    <textarea name="ymessage" id="ymessage" rows="5" required></textarea>
+                                    
+                                    <div class="contact-form">
+                                        <input type="submit" 
+                                        value="Submit" 
+                                        class="submit-button" 
+                                        onclick="closePopup()">
+
+                                    </div>
+
+                                    <div class="close-button" 
+                                    onclick="closePopup()">
+                                        <img src="./afds assets/CLOSE BUTTON.png" alt="Close"/>
+                                    </div>
+                                        
+                                
+                                </div>
+                            </form>
+                                
                         </div>
-                        <div class="contact-info">
-                            <h2>Contact Us!</h2>
-                            <p>First Name:</p>
-                            <p>Last Name:</p>
-                            <p>Email:</p>
-                            <p>Your Message:</p>
-                            <button class="submit-button" 
-                                onclick="closePopup()">
-                                Submit
-                            </button>
-                        
-                        </div>
-                    </div>
                 </div>
                 <div id="social-container">
                     <h1 class="link_text">Check Out Our Links:</h1>
@@ -133,26 +167,431 @@
                 
             </div>   
             
-            <img src="./assets/arrow.png" 
-            alt="Arrow Icon" 
-            class="icon arrow"
-            onclick="location.href='./birdmask'"/>
+            <img src="./afds assets/arrow.png" 
+                alt="Arrow Icon" 
+                class="icon arrow"
+                onclick="location.href='#gallery'"/>
         </section>
 
-       
+        <section id="gallery">
+            <div class="gallery-title">
+                <p4 class="title">Our Gallery</p4>
+            </div>
+
+            <div class="gallery-title-OC">
+                <h2 class="title">Original Characters</h2>
+            </div>
+
+            <div class="gallery-content swiper">
+                <div class="image-wrapper">
+                    <ul class="image-list swiper-wrapper">
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/2 - 05_29_2025 - XP PEN 2.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge 2 - 05_29_2025 - XP PEN 2">XP Pen DTIYS</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" 
+                                    onclick="window.location.href='xppen.html'"/>
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/2 - 08_22_2025 - NICOLE AND AYANNA.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Nicole and Ayanna</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/2 - 06_19_2025 - JTEENTH 1.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Juneteenth 2025</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/2 - 01_25_2025 - ALEIA AND KADIJA.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Aleia and Kadija Spring 2025</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/NICOLE & ANORA 1.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Nicole and Anora Spring 2025</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/RID AND KWA 1.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Kwame and Rida Spring 2025</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/ALEIA AND DIJA 2.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Kadija and Aleia Summer 2025</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/NICOLE & ANORA 2.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Nicole and Anora Summer 2025</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/RIDA AND KWAME 2.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Rida and Kwame Summer 2025</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="gallery-title-fan">
+                <h2 class="title">Fan Arts</h2>
+            </div>
+
+            <div class="gallery-content swiper">
+                <div class="image-wrapper">
+                    <ul class="image-list swiper-wrapper">
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/2 - 04_08_2025 - BEN 10 1.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Four Arms (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/2 - 04_08_2025 - BEN 10 3.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">XLR8 (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/2 - 04_08_2025 - BEN 10 4.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Heatblast (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/alienx.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Alien X (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/ghostfreak.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Ghost Freak (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/diamondhead.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Diamond Head (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/bigchill.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Big Chill (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/ripjaw.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Rip Jaw (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/wildmutt.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Wild Mutt (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/swampfire.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Swampfire (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/upgrade.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Upgrade (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        <li class="image-item swiper-slide">
+                            <a href="#" class="image-link">
+                                <img src="afds assets/waybig.png" 
+                                alt="Gallery Image"
+                                class="gallery-image">
+                                <p class="badge">Waybig (Ben 10)</p>
+                                <button class="more-info">
+                                    <img src="afds assets/more_info.png"
+                                    alt="info Icon"
+                                    onmouseover="this.src='afds assets/more_info_rev.png'"
+                                    onmouseout="this.src='afds assets/more_info.png'" />
+                                </button>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+                
+            </div>
+
+
+            <a href="#contact" 
+                class="arrow" 
+                aria-label="Scroll to contact">
+            <img src="./afds assets/arrow.png" 
+                alt="Arrow Icon">
+            </a>
+        </section>
+
+        <section id="contact">
+            <div class="contact-title">
+                <p4 class="title">Contact Us!</p4>
+            </div> 
+
+            <div class="contact-details">
+                <div class="iwejuos-container">
+                    <img 
+                        src="./afds assets/1 - 12_23_2024 - IWEJUOS.png"
+                        alt="Profile picture"
+                        class="contact banner"
+                    />
+                </div>
+
+                <form action-two="" method="get" class="contact-form-two">
+                    <div class="contact-form-two">
+
+                        <!-- First Name-->
+                        <label for="fname">First Name: </label>
+                        <input type="text" name="fname" id="fname" required />
+                        
+                        <!-- Last Name-->
+                        <label for="fname">Last Name: </label>
+                        <input type="text" name="lname" id="lname" required />
+                        
+                        <!-- Email -->
+                        <label for="email">Email: </label>
+                        <input type="text" name="email" id="email" required />
+                        
+                        <!-- Your Message -->
+                        <label for="ymess">Your Message: </label>
+                        <textarea name="ymessage" id="ymessage" rows="5" required></textarea>
+                        
+                        <div class="contact-form">
+                            <input type="submit" 
+                            value="Submit" 
+                            class="submit-button" >
+
+                        </div>
+                            
+                    
+                    </div>
+                </form>
+            </div>
+            
+                
+        </section>
+
+       <footer>
+            <p>© 2025  AFDS. All Rights Reserved.</p>
+        </footer>
         
+        <!-- SCRIPTS -->
 
         <script src="script.js"></script>
 
+        <!-- POPUP SCRIPT-->
         <script>
             let popup = document.getElementById("popup");
-            
             function openPopup(){
                 popup.classList.add("open-popup");
+                document.getElementById("ymessage").setAttribute("required", "true");
             }
             function closePopup(){
                 popup.classList.remove("open-popup");
+                document.getElementById("ymessage").removeAttribute("required");
             }
         </script>
+
+        <!-- SWIPER SCRIPT-->
+        <script 
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- LINKING CUSTOM SWIPER SCRIPT -->
+        <script src="swiper_script.js"></script>
     </body>
 </html>
