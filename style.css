@@ -34,6 +34,66 @@ a,
     transition: all 300ms ease;
 }
 
+/* HEADER STYLING*/
+header{
+    position: relative;
+    background: rgb(132, 58, 58);
+    width: 100vw;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.social-container {
+    display: flex;
+}
+
+.instagram-button {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0%;
+    border: none;
+    padding-left: 200px;
+    cursor: pointer;
+}
+.instagram-button img {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+.linktree-button {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0%;
+    border: none;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.linktree-button img {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+.yt-button {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0%;
+    border: none;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.yt-button img {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+
+
+
 /* DESKTOP NAVIGATION */
 
 nav, 
@@ -63,7 +123,7 @@ a {
 
 /* Color of the Navigation Text when Hovering over with Cursor*/
 a:hover {
-    color: rgb(81, 177, 222);
+    color: rgb(132, 58, 58);
     text-decoration: underline;
     text-underline-offset: 1rem; 
 }
@@ -227,17 +287,6 @@ section {
     text-align: center;
 }
 
-socials-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
-}
-
-.icon {
-    cursor: pointer;
-    height: 2rem;
-}
 
 /* CONTACT BUTTONS*/
 
@@ -373,6 +422,20 @@ label {
 
 #about{
     position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#about.is-visible{
+    opacity: 1;
+}
+
+.about-title {
+    text-align: center;
+    background: rgb(132, 58, 58);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 50px 0;
 }
 
 .about-containers {
@@ -384,7 +447,6 @@ label {
 .about-details-container {
     justify-content: center;
     flex-direction: column;
-    padding: 50px;
 }
 
 .about-containers,
@@ -400,11 +462,17 @@ label {
     text-align: center;
 }
 .flags-container {
+    padding-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.flags-container img {
+    width: 50px;
+    max-width: 400px;
 }
 
 .about-pic {
@@ -424,6 +492,7 @@ label {
 
 .arrow {
   position: absolute;
+  max-width: 30px;
   bottom: 20px;
   left: 100%;
   transform: translateX(-50%);
@@ -431,8 +500,9 @@ label {
   cursor: pointer;
 }
 .arrow img {
-  width: 40px;
-  height: auto;
+    max-width: 30px;
+    width: 30px;
+    height: auto;
 }
 
 .details-container {
@@ -463,6 +533,11 @@ label {
 #gallery {
     position: relative;
     margin-bottom: 150px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#gallery.is-visible{
+    opacity: 1;
 }
 
 .gallery-title {
@@ -583,44 +658,90 @@ button.more-info img {
 #contact {
     background-color: rgb(132, 58, 58);
     width: 100vw;
-    margin: 0;
-    padding: 25px;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#contact.is-visible{
+    opacity: 1;
+}
+.contact-title {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .contact-details {
-    display: flex;
-    gap: -5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 .contact-form-two {
-    text-align: center;
-    align-items: center;
-    gap: 2px;
-    margin: 0 auto;
-    flex-direction: column;
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: left;      
+  max-width: 400px; 
+  margin: 0;     
+}
+
+.contact-form-two label {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 211, 211);
 }
 
 .iwejuos-container img {
-    width: 50%;      
+    width: 250px;      
     height: auto; 
-    margin-top: 5%;
-    margin-left: 10%;   
+    margin: 0 auto;
     border-radius: 6px;
     border: rgb(255, 211, 211) 0.15rem solid;
-    border-color: rgb(255, 211, 211);
     transition: 0.4s ease;
 }
+
 .iwejuos-container img:hover {
     transition: 0.4s ease;
     transform: scale(105%);
 }
 
-.contact-title {
-    text-align: center;
+.socials-contact {
+    display: block;
+    margin: 0;    
+    justify-content: left;
+}
+
+.afds-light img {
+    width: 200px;
+    height: auto;
+    margin: 0;
+    transition: 0.4s ease;
+    margin-bottom: 20px;
+    padding: 0.5rem;
 }
 
 
+
+.insta-follow {
+    font-weight: 700;
+    margin: 30px 0 10px;
+    transition: all 300ms ease;
+    color: rgb(255, 211, 211);
+    font-size: 18px;
+    padding: 0.5rem;
+
+}
+
+.insta-follow:hover {
+    color: rgb(132, 58, 58);
+    background: rgb(255, 211, 211);
+    width: 15rem;
+    border-radius: 2rem;
+    border: none;
+}
 
 
 /** FOOTER **/
@@ -628,6 +749,7 @@ button.more-info img {
 footer {
   text-align: center;
   padding: 5px;
+  width: 100vw;
   background-color: rgb(255, 211, 211);
   color: black;
 }

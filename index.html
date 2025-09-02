@@ -12,9 +12,42 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </head>
     <body>
+        <header>
+            <div class="social-container">
+                <a href="https://www.instagram.com/afds_bm/" 
+                    title="Instagram" 
+                    class="instagram-button" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <img src="./afds assets/Instagram_logo_2022_red.png" alt="Instagram" />
+                </a>
+
+                <a href="https://linktr.ee/AFDS_BM"
+                    title="Linktree"
+                    class="linktree-button"
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <img src="./afds assets/Linktree-Emblem_red.png" alt="Linktree" />
+                </a>
+                
+                <a href="https://www.youtube.com/channel/UCXLD_y5wbaOsAyvOM3_w7Rg?sub_confirmation=1"
+                    title="Youtube"
+                    class="yt-button"
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <img src="./afds assets/ytlogo.png" alt="Linktree" />
+                </a>
+
+            </div>
+        </header>
+
         <nav id="desktop-nav">
             <a href="#" class="logo">
-                <img src="afds assets/AFDS LOGO.png" alt="AFDS logo">
+                <img src="afds assets/AFDS LOGO.png" 
+                alt="AFDS logo"
+                onmouseover="this.src='afds assets/AFDS LOGO_hover.png'"
+                onmouseout="this.src='afds assets/AFDS LOGO.png'">
+        
             </a>
             <div>
                 <ul class="nav-links">
@@ -26,7 +59,10 @@
         </nav>
         <nav id="hamburger-nav">
             <a href="#" class="logo">
-                <img src="afds assets/AFDS LOGO.png" alt="AFDS logo">
+                <img src="afds assets/AFDS LOGO.png" 
+                alt="AFDS logo"
+                onmouseover="this.src='afds assets/AFDS LOGO_hover.png'"
+                onmouseout="this.src='afds assets/AFDS LOGO.png'">
             </a>
             <div class="hamburger-menu">
                 <div class="hamburger-icon" onclick="toggleMenu()">
@@ -104,24 +140,14 @@
                                 
                         </div>
                 </div>
-                <div id="social-container">
-                    <h1 class="link_text">Check Out Our Links:</h1>
-
-                    <img src="./afds assets/Instagram_logo_2022.png" 
-                    alt="Check Out Our Instagram"
-                    class="icon" onclick="location.href='https://www.instagram.com/afds_bm/'" />
-
-                    <img src="./afds assets/Linktree-Emblem.png" 
-                    alt="Check Out Our Linktree"
-                    class="icon" onclick="location.href='https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2FAFDS_BM%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaesZbOP2MszY7NFDD00tnIUmvq2STBICh76qRx3iCe2LppkWAHsSdJhUOD27A_aem_zDDoSKxdrGifK-NSiRtANQ&e=AT0CkORHFYbwsrynechUTyQsxDAicMObSrb4ODXFHf8_o9woI3VPCTHyjM1YdJL6FZG-TlfIBid6MCaOXQ3TV6frETMeP0wNYeit1The3Vywke20HsoSbYc'" />
-                
-                    
-                
-                </div>
+            
             </div>
         </section>
         <section id="about">
-            <p class="title">About Us</p>
+            <div class="about-title">
+                <p4 class="title">About Us</p4>
+            </div>
+            
             <div class="section_container">
                 <img 
                     src="./afds assets/WHO WE ARE.png"
@@ -529,11 +555,11 @@
                         src="./afds assets/1 - 12_23_2024 - IWEJUOS.png"
                         alt="Profile picture"
                         class="contact banner"
+                        title="AFDS Gang!"
                     />
                 </div>
 
-                <form action-two="" method="get" class="contact-form-two">
-                    <div class="contact-form-two">
+                <form action="" method="get" class="contact-form-two">
 
                         <!-- First Name-->
                         <label for="fname">First Name: </label>
@@ -559,8 +585,20 @@
                         </div>
                             
                     
-                    </div>
                 </form>
+
+                <div class="socials-contact">
+                    <div class="afds-light">
+                        <img src="afds assets/AFDS LOGO_light.png"
+                        alt="AFDS Logo"/>
+                    </div>
+
+                <a href="https://www.instagram.com/afds_bm/" 
+                    class="insta-follow" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    Follow Us on Instagram!
+                </a>
             </div>
             
                 
@@ -593,5 +631,53 @@
 
         <!-- LINKING CUSTOM SWIPER SCRIPT -->
         <script src="swiper_script.js"></script>
+
+        <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const about = document.getElementById("about");
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            about.classList.add("is-visible");
+                            observer.unobserve(about); // optional: only run once
+                        }
+                        });
+                    }, { threshold: 0.2 }); // 20% visible
+
+                    observer.observe(about);
+                });
+                document.addEventListener("DOMContentLoaded", () => {
+                    const gallery = document.getElementById("gallery");
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            gallery.classList.add("is-visible");
+                            observer.unobserve(gallery); // optional: only run once
+                        }
+                        });
+                    }, { threshold: 0.2 }); // 20% visible
+
+                    observer.observe(gallery);
+                });
+                document.addEventListener("DOMContentLoaded", () => {
+                    const contact = document.getElementById("contact");
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            contact.classList.add("is-visible");
+                            observer.unobserve(contact); // optional: only run once
+                        }
+                        });
+                    }, { threshold: 0.2 }); // 20% visible
+
+                    observer.observe(contact);
+                });
+
+        </script>
+
+
     </body>
 </html>
